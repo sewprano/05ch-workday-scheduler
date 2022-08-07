@@ -66,8 +66,13 @@ function createTimeBlocks() {
     }
 }
 
+function saveEvent(event) {
+    var target = $(event.target);
+    var value = target.siblings("textarea").val();
+    localStorage.setItem("hour-" + target.data("hour").value);
+}
+
 createTimeBlocks();
 
-//enter event
-
-//save event
+//save events
+timeBlockEl.on("click", "button", saveEvent);
