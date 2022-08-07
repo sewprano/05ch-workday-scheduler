@@ -46,8 +46,8 @@ function createTimeBlocks() {
         //add text to save button
         saveEl.text("Save");
         //add data to elements
-        saveEl.data("hour-", i);
-        eventEl.data("hour-", i);
+        saveEl.data("hour", i);
+        eventEl.data("hour", i);
         //get saved events
         eventEl.val(localStorage.getItem("hour-" + i));
         //format and display hour
@@ -69,7 +69,8 @@ function createTimeBlocks() {
 function saveEvent(event) {
     var target = $(event.target);
     var value = target.siblings("textarea").val();
-    localStorage.setItem("hour-" + target.data("hour").value);
+    console.log(value);
+    localStorage.setItem("hour-" + target.data("hour"), value);
 }
 
 createTimeBlocks();
