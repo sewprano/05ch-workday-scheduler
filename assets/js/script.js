@@ -14,7 +14,7 @@ todayEl.text(now.format("MMMM Do YYYY, h:mm:ss a"));
 
 console.log(currentHour);
 
-//if currnet hour, style with .present
+//if current hour, style with .present
 //if hour past, style with .past
 //if hour future, style with .future
 function relativeHour() {
@@ -28,6 +28,9 @@ function relativeHour() {
 
     }
 } 
+
+// display time blocks
+
 //enter event
 
 //save event
